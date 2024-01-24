@@ -1,0 +1,35 @@
+\section{Introduction}
+
+\IEEEPARstart{R}{ecent developments} in active microwave remote sensing showed the potential of \ac{sar} for monitoring important snow characteristics.
+More precisely, studies demonstrated the high sensitivity of \ac{sar} backscattering in the Ku-band domain (\qtyrange{12}{18}{\giga\hertz}) to \acf{swe} \parencite{Shi2016,King2018,Rutter2019}.
+Following \ac{swe} temporal and spatial variation in location where the snow coverage spans more than 6 months per year is of utmost importance for hydrological cycles \parencite{Zhang2005,Ayguen2020}, surface energy balance \parencite{Cohen2001,Box2019} and biogeochemical cycles \parencite{Zhang2005,Grogan2006}, among others.
+The significance of seasonal snowmelt and \ac{swe} in delivering freshwater is of great importance for the well-being of Canadians, supporting a diverse array of economic sectors and sustaining ecosystems.
+Simultaneously, it introduces risks through contributions to floods and the perpetuation of drought events.
+The impact of these snow variables, combined with the recent \ac{sar} developments led to the beginning of a joint mission from \ac{csa} and \ac{eccc}, \acf{tsmm} \parencite{Derksen2019,Garnaud2019}, which aims to launch a dual Ku-band \ac{sar} (\qty{13.5}{\giga\hertz} and \qty{17.2}{\giga\hertz}) aboard a satellite for snow monitoring in the Northern Hemisphere.
+Moreover, satellite Ku-band \ac{sar} observations would offer regular high resolution (few meters) \ac{swe} data for remote locations around the globe, under various meteorological conditions \parencite{Tsai2019}.
+Indeed, Ku-band radar signals have low interactions with atmospheric particles such as water vapor in clouds and is completely independent of solar radiations.
+
+However, there are still lots of challenges for \ac{swe} inversion using the Ku-band \ac{sar} backscatter signal.
+Indeed, the backscattering signal is not only influenced by \ac{swe}, but also by other snowpack characteristics such as microstructure and liquid water content, and by the substrate under the snow (sea ice, fresh water ice, soil, etc.) and vegetation cover.
+To overcome these obstacles, modelization of the signal via microwave radiative transfer models such as \ac{smrt} \parencite{Picard2018} is used to disentangle the effect from each contribution, enabling \ac{swe} retrieval from the backscattering signal.
+Most of the existing models for active remote sensing backscatter were built for lower microwave frequencies (\(<\)\qty{6}{\giga\hertz}, \parencite{Longepe2009}), whereas \ac{smrt} was designed to work in a frequency range that encompasses the \ac{tsmm} mission dual Ku-band frequencies.
+Moreover, \ac{smrt} was specifically conceived to include parameters such as snow microstructure and the substrate characteristics.
+Nonetheless, \ac{smrt} developers note that there is a need for more precise wave diffusion models at snow/substrate interface \parencite{Picard2018}.
+Soil contribution remains misrepresented by the model and brings some uncertainty in the snow signal produced \parencite{King2018}.
+In order to model the soil contribution to the total backscattering signal, an important parameter to understand is the soil relative permittivity (hereafter referred to as permittivity).
+
+Knowing the soil permittivity allows to model the soil influence over the total signal.
+In current radiative transfer models targeting snow characteristics, frozen soil permittivity is often set to a constant close to that of dry soil \parencite{Hallikainen1985,Kerr2012}.
+This is due to the lack of knowledge regarding the spatial and temporal variability of frozen soil permittivity.
+Soil permittivity greatly depends on soil water content \parencite{Topp1980} where water permittivity is relatively high (\(\varepsilon^\prime \approx 80\) at L-band) compared to dry soil (\(\varepsilon^\prime \approx 2.5\) \parencite{Matzler1998}) or ice (\(\varepsilon^\prime \approx 3.2\) \parencite{Matzler1987}).
+This means that having unfrozen water in the soil would greatly increase the permittivity, hence modifying the soil backscattering signal.
+Previous work on soil dielectric properties have been made where the dielectric constant is measured as a function of either the temperature and/or the water content and the soil texture \parencite{Cihlar1974,Hoekstra1974,Bobrov2015,Kabir2020}.
+Models for soil permittivity (called dielectric mixing models, \parencite{Dobson1985,Hallikainen1985,Mironov2009,Zhang2010}) have also previously been developed.%
+
+In this context, the goal of this article is to present a novel \ac{oecp} with an operating frequency range from \SIrange{0.5}{18}{\giga\hertz}, able to measure the permittivity of a flat material or liquid.
+The probe aperture (the measurement plane) is sufficiently large to integrate a representative average permittivity over non-homogeneous soil.
+The experimental setup required to operate the probe is simple and easily portable, making it perfect for laboratory or field usage.
+In this study, we present the novel \ac{oecp} and its precision over its full operating range as well as tests to estimate the probe signal penetration depth.
+Then, liquids of known permittivity are used to compare the probe's results to theoretical values in order to validate the probe calibration.
+Finally, a protocol was developed to measure the soil permittivity in a controlled varying temperature environment (from \qtyrange{-20}{20}{\degreeCelsius}).
+Two different soil types (sand and arctic organic soil) were analyzed following the new protocol.

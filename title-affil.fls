@@ -1,0 +1,6 @@
+PWD D:/Documents/UQTR/Articles/probe-permittivity/writing
+INPUT c:/tools/TinyTeX/texmf.cnf
+INPUT c:/tools/TinyTeX/texmf-dist/web2c/texmf.cnf
+INPUT c:/tools/TinyTeX/texmf-var/web2c/pdftex/latex.fmt
+INPUT title-affil.tex
+OUTPUT title-affil.log

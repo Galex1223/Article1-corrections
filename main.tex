@@ -1,0 +1,53 @@
+\documentclass[journal]{IEEEtran}
+
+\usepackage{preamble}
+\usepackage{abbreviation} % Liste des abréviations
+\input{title-affil}
+
+\usepackage[style=ieee,
+            backref=false,
+            isbn=false,
+            eprint=false,
+            url=false,
+            doi=false,
+            ]{biblatex}
+\addbibresource{bib/_ProbePermittivity.bib}
+
+\AtEveryBibitem{\clearfield{month}}
+\AtEveryCitekey{\clearfield{month}}
+
+% Diagonal fraction
+\newcommand{\sidefrac}[2]{{}^{#1}{\mskip-3mu/\mskip-3mu}_{#2}}
+
+% From IEEE how-to.tex
+\usepackage{balance}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    We present a unique Open-Ended Coaxial Probe that has the capability of accurately measuring the permittivity of heterogeneous materials, such as soil, due to its large aperture.
+    The probe was designed to work at frequencies ranging from \qtyrange{0.5}{18}{\giga\hertz}, which is a particularly important range for microwave remote sensing applications, and more precisely the \ac{tsmm}.
+    \ac{tsmm} aims at launching a new satellite equipped with a dual Ku-band radar (\qtyrange[range-phrase=~and~]{13.5}{17.2}{\giga\hertz}) for snow monitoring.
+    At Ku-band frequencies, the backscattered radar signal contains information about the snow, but can also contain a contribution from the soil.
+    Knowing the soil permittivity will enable a better representation of this soil contribution to the radar signal to obtain more accurate snow data such as \ac{swe}.
+    To demonstrate the accuracy and repeatability of the probe, solutions of known permittivity were measured, and the results were compared to their theoretical values.
+    Then, tests for approximating the penetration depth of the probe signal were conducted with dry and wet paper.
+    Afterwards, a protocol to use the probe to compute the permittivity of soil samples in freeze/thaw cycles was developed.
+    The permittivity of commercial sand and arctic organic soil from Cambridge Bay (Nunavut) are presented for different relevant microwave remote sensing frequencies selected on the full range of the probe and temperatures (\qtyrange{-20}{20}{\degreeCelsius}) according to the new protocol.
+    The main goal of this paper is to present the probe and its potential use in the field of remote sensing, especially for active Ku-band remote sensing applications, where there is little work done.
+\end{abstract}
+
+\begin{IEEEkeywords}
+    Coaxial probe, Microwaves, Remote Sensing, Permittivity, Soil
+\end{IEEEkeywords}
+
+\input{sections/intro}
+\input{sections/methode}
+\input{sections/results}
+\input{sections/conclu}
+
+\printbibliography{}
+
+\end{document}
